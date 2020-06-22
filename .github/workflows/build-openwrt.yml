@@ -85,8 +85,8 @@ jobs:
         chmod +x $DIY_P2_SH
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
-        cp ~/work/OpenWRT/OpenWRT/config-5.4 ~/work/OpenWRT/OpenWRT/openwrt/target/linux/x86/
-        #cp ~/work/OpenWRT/OpenWRT/config-4.19 ~/work/OpenWRT/OpenWRT/openwrt/target/linux/x86/
+        cp ~/work/Actions-OpenWrt/Actions-OpenWrt/config-5.4 ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt/target/linux/x86/
+        #cp ~/work/Actions-OpenWrt/Actions-OpenWrt/config-4.19 ~/work/OActions-OpenWrt/Actions-OpenWrt/openwrt/target/linux/x86/
 
     - name: SSH connection to Actions
       uses: P3TERX/debugger-action@master
@@ -119,9 +119,9 @@ jobs:
     - name: Backup Kernel Config
       id: backup
       run: |
-        mkdir -p ~/work/OpenWRT/OpenWRT/openwrt/bin/targets/x86/64/
-        cp ~/work/OpenWRT/OpenWRT/openwrt/target/linux/x86/config-5.4 ~/work/OpenWRT/OpenWRT/openwrt/bin/targets/x86/64/
-        #cp ~/work/OpenWRT/OpenWRT/openwrt/target/linux/x86/config-4.19 ~/work/OpenWRT/OpenWRT/openwrt/bin/targets/x86/64/
+        mkdir -p ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt/bin/targets/x86/64/
+        cp ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt/target/linux/x86/config-5.4 ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt/bin/targets/x86/64/
+        #cp ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt/target/linux/x86/config-4.19 ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt/bin/targets/x86/64/
 
     - name: Upload bin directory
       uses: actions/upload-artifact@master
